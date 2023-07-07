@@ -59,13 +59,13 @@ public class BaseMethods {
             MimeMessage message = new MimeMessage(mailSession);
             message.setContent(content, "text/html");
             message.setSubject(subject);
-            InternetAddress sender = new InternetAddress("ph848700@gmail.com", "Harshil_Panchal");
+            InternetAddress sender = new InternetAddress("******@gmail.com", "Employee Reward System");
             InternetAddress receiver = new InternetAddress(email);
             message.setFrom(sender);
             message.setRecipient(Message.RecipientType.TO, receiver);
             message.saveChanges();
             javax.mail.Transport transport = mailSession.getTransport("smtp");
-            transport.connect("smtp.gmail.com", 587, "harshiltest12@gmail.com", "ctutelqullsnxplo");
+            transport.connect("smtp.gmail.com", 587, "*****@gmail.com", "*********");
             transport.sendMessage(message, message.getAllRecipients());
             transport.close();
         } catch (Exception e) {
